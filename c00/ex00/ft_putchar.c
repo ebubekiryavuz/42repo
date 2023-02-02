@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 13:48:08 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/21 20:34:36 by ebubekir         ###   ########.tr       */
+/*   Created: 2023/02/01 08:17:12 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/01 09:02:25 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putchar ('c');
-	return (0);
+	write(1, &c, 1);
 }

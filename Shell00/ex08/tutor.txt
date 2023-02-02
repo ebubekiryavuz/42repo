@@ -1,6 +1,0 @@
-./ebu4~
-./ebu%~
-./ebu~
-
-yanlızca -f olduğundan dolayı file dosyaları silinebilir 'd' eklersek 
-dirlerde silinebilir
