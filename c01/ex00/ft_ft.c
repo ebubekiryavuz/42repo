@@ -3,23 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 14:10:30 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/12 14:14:45 by ebubekir         ###   ########.tr       */
+/*   Created: 2023/02/03 07:53:37 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/03 07:53:55 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
-/* ************************************************************************** */#include <unistd.h>
+/* ************************************************************************** */
+
 #include <stdio.h>
+
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-}
-int main (void)
-{
-	int	*nbr;
-	int	number;
-
-	nbr = &number;
-	ft_ft(nbr);
-	printf("%d", number);
 }

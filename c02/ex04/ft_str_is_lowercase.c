@@ -6,7 +6,7 @@
 /*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 02:54:25 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/24 02:54:48 by ebubekir         ###   ########.tr       */
+/*   Updated: 2023/02/02 13:36:28 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,4 @@ int	ft_str_is_lowercase(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int	main()
-{
-	printf("%d", ft_str_is_lowercase("abcdefghijkl"));
-        printf("\n%d", ft_str_is_lowercase("abcAdefghijkl"));
-        printf("\n%d", ft_str_is_lowercase("-_134556efSghij67"));
 }

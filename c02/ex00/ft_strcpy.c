@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 17:29:24 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/24 03:00:18 by ebubekir         ###   ########.tr       */
+/*   Created: 2023/02/02 15:15:59 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/03 07:16:21 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strlowcase(char *str)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	c;
 
-	i = 0;
-	while (str[i] != '\0')
+	c = 0;
+	while ((src[c] != '\0') && (c < n))
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] += 32;
-		}
-		i++;
+		dest[c] = src[c];
+		c++;
 	}
-	return (str);
+	while (c < n)
+	{
+		dest[c] = '\0';
+		c++;
+	}
+	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 02:52:53 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/24 02:53:27 by ebubekir         ###   ########.tr       */
+/*   Updated: 2023/02/02 13:23:23 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,4 @@ int	ft_str_is_numeric(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int	main()
-{
-	printf("%d", ft_str_is_numeric("01948987493"));
-	printf("\n%d", ft_str_is_numeric("0484882j8995489"));
-	printf("\n%d", ft_str_is_numeric("-_jsdsdc67sdlkc,"));
 }
