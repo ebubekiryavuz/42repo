@@ -1,6 +1,0 @@
-str cmp 
-compare yani karşılaştırma
-
-Bu kodun ft_strcmp fonksiyonu iki metin dizisi alır ve bunları karşılaştırır. Bu amaçla fonksiyon içinde bir döngü tanımlanmıştır. Döngü, her iki metin dizisi içinde aynı indeksteki karakterleri karşılaştırır. Eğer iki karakter eşit ise, döngü devam eder ve bir sonraki karakterlere geçer. Eğer iki karakter farklı ise, döngü sona erer ve fonksiyon o anki karakterlerin ASCII değerleri arasındaki farkı döndürür.
-
-main() fonksiyonu ise ft_strcmp fonksiyonunu çağırarak örnek değerler ile çalıştırır. Örnek olarak, "Hello" ve "Hello1" metin dizileri karşılaştırılır. Diziler arasındaki ilk farklı karakter 'l' ile '1' olduğu için fonksiyon 108-49 = 59 değerini döndürür. Bu şekilde "Hello" ile "He" , "Hello" ile "Hello" ve "AAa" ile "AAA" metin dizileri karşılaştırılır ve sonuçlar ekrana yazdırılır.

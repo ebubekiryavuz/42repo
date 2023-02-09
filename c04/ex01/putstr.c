@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   putstr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 15:54:46 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/20 16:07:03 by ebubekir         ###   ########.tr       */
+/*   Created: 2023/02/09 22:39:37 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/09 22:39:57 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-
 void	ft_putstr(char *str)
 {
-	
-	
-	while(*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(*str);
-		str++;
-		
+		write (1, &str[i], 1);
+		i++;
 	}
 }
-
-int		main(void)
-{
-	char str[] = "Hello, world!";
-	char *p_str;
-
-	p_str = str;
-	ft_putstr(p_str);
-}
+/*
+ int main()
+ {
+ 	ft_putstr("Hello World!");
+ }
+ */

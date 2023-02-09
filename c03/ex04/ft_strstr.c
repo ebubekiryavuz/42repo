@@ -1,46 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr.c                                           :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 22:40:47 by ebuyavuz          #+#    #+#             */
-/*   Updated: 2023/02/09 22:41:40 by ebuyavuz         ###   ########.tr       */
+/*   Created: 2023/02/09 20:17:54 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/09 20:18:07 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
 
-void	ft_putchar(char c)
+char	*ft_strstr(char *str, char *to_find)
 {
-	write(1, &c, 1);
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	if (to_find[j] == '\0')
+		return (str);
+	while (str[i] != '\0')
+	{
+		while (str[i + j] == to_find[j] && str[i + j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (str + i);
+		i++;
+		j = 0;
+	}
+	return (0);
 }
 
-void	ft_putnbr(int nb)
+/*int	main()
 {
-	if (nb == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr(nb);
-	}
-	else if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + 48);
-}
-/*int main (void)
-{
-	ft_putnbr(4563);
+	char str[] = "42 1337 Network 2021 piscine Benguerir Khouribga";
+	char find[] = "piscine";
+	printf("%s", ft_strstr(str, find));
 }*/

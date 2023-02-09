@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr.c                                           :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 22:40:47 by ebuyavuz          #+#    #+#             */
-/*   Updated: 2023/02/09 22:41:40 by ebuyavuz         ###   ########.tr       */
+/*   Created: 2023/02/09 20:13:08 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/09 20:13:21 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	write(1, &c, 1);
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (s1[i] > s2[i])
+		{
+			return (1);
+		}
+		else if (s1[i] < s2[i])
+		{
+			return (-1);
+		}
+		i++;
+	}
+	return (0);
 }
 
-void	ft_putnbr(int nb)
+/*int	main()
 {
-	if (nb == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr(nb);
-	}
-	else if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + 48);
-}
-/*int main (void)
-{
-	ft_putnbr(4563);
+	printf("%d", ft_strncmp("Hello", "HelloWorld", 8));
 }*/

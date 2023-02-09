@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebubekir <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*   By: ebuyavuz <42istanbul.com.tr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 13:18:57 by ebubekir          #+#    #+#             */
-/*   Updated: 2023/01/25 13:20:25 by ebubekir         ###   ########.tr       */
+/*   Created: 2023/02/09 20:00:00 by ebuyavuz          #+#    #+#             */
+/*   Updated: 2023/02/09 20:12:20 by ebuyavuz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int	main(void)
+/*int	main()
 {
-	printf("%d", ft_strcmp("ebu", "ebu1"));
-	printf("\n%d", ft_strcmp("E", "e"));
-}
+	printf("%d", ft_strcmp("ebu", "ebubekir"));
+	printf("\n%d", ft_strcmp("ebubekir", "ebu"));
+	printf("\n%d", ft_strcmp("ebu", "ebu"));
+}*/
